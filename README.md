@@ -4,7 +4,7 @@ Simple converter equirectangular to cubemap.
 
 Example for using:
 
-  f, _ := os.Open("pano.bmp")
+	f, _ := os.Open("pano.bmp")
 	s, _ := f.Stat()
 	b := make([]byte, s.Size())
 	f.Read(b)
