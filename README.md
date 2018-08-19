@@ -19,8 +19,6 @@ Example for using:
 	for face := 0; face < 6; face++ {
 		imgOut := image.NewRGBA(image.Rect(0,0,faceSize,faceSize))
 		convertFace(imgIn, imgOut, face)
-
-		fmt.Println(imgOut.Pix[150])
 		dstFile, _ := os.Create("cube_" + fmt.Sprint(face) + ".bmp")
 		bmp.Encode(dstFile, imgOut)
 		dstFile.Close()
