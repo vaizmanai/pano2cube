@@ -84,9 +84,6 @@ func convertFace(imgIn *image.RGBA, imgOut *image.RGBA, faceIdx int) {
 			r,g,b := float64(A.R)*(1.0-mu)*(1.0-nu)+ float64(B.R)*((mu)*(1.0-nu)) + float64(C.R)*((1.0-mu)*nu) + float64(D.R)*(mu*nu),
 						float64(A.G)*((1-mu)*(1-nu)) + float64(B.G)*((mu)*(1-nu)) + float64(C.G)*((1-mu)*nu) + float64(D.G)*(mu*nu),
 						float64(A.B)*((1-mu)*(1-nu)) + float64(B.B)*((mu)*(1-nu)) + float64(C.B)*((1-mu)*nu) + float64(D.B)*(mu*nu)
-			if r == 1.0 && g == 1.0 && b == 1.0 {
-
-			}
 
 			imgOut.SetRGBA(xOut, yOut, color.RGBA{R:uint8(round(r)), G:uint8(round(g)), B:uint8(round(b)), A:uint8(255)})
 		}
